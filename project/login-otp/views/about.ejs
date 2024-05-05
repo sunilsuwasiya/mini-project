@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Special Home Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #514c4c2c;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    main {
+      margin: 20px;
+      text-align: center;
+    }
+   
+   
+    
+    @keyframes slideAnimation {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      25% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      75% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+    }
+    
+    .section-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    
+    .card-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    
+    .card {
+      width: 200px;
+      height: 200px;
+      background-color: #403d3d3e;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(49, 47, 47, 2);
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    
+    .card:hover {
+      transform: scale(1.05);
+    }
+    
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .card-description {
+      font-size: 16px;
+      color: #00000098;
+    }
+    
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation 1s ease-in-out forwards;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>About</h1>
+  </header>
+  
+  <main>
+  
+    
+    <h2 class="section-title">Heyy! SUNIL here..</h2>
+    <div class="fade-in">
+      <p>I am a web developer with a passion for coding and creating interactive websites.</p>
+    </div>
+    
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3 class="card-title">Online Voting System</h3><br>
+        <p class="card-description">With features such as user authentication, encrypted data transmission, and real-time result tracking.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">OTP Authentication</h3><br>
+        <p class="card-description">Implementing an OTP authentication system to enhance security and verify user identity.</p>
+      </div>
+      <div class="card">
+        <h3 class="card-title">User Menagement</h3>
+        <p class="card-description">Developing a user management system to efficiently handle user registrations, logins, and access control within the application.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

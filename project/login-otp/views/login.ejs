@@ -1,0 +1,238 @@
+<html>
+
+<head>
+    <title>login</title>
+    <link rel="icon" type="image" href="https://drive.google.com/uc?export=view&id=1r-vh3TIhFbQkZrm-znfbqtzfRrFUylRS">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: lightgrey;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .disppear {
+        animation: vanish 1s forwards;
+    }
+
+    @keyframes vanish {
+        100% {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    body {
+        background-image: url("leaf.jpg");
+        background-size: 95%;
+        margin: 0%;
+    }
+
+
+    .form {
+        position: absolute;
+        right: 30%;
+    }
+
+
+    form {
+        padding: 200px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: transparent;
+        backdrop-filter: blur(1px);
+        box-shadow: 1px 1px 10px 1px rgb(0, 7, 14);
+        border-radius: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        font-size: larger;
+    }
+
+    .b1,
+    .b2 {
+        background-color: rgba(0, 0, 0, 0.075);
+        border-radius: 1px;
+        border: 0px;
+        font: bold;
+        box-shadow: 1px 1px 3px 1px;
+        padding: 5px 70px 5px 70px;
+    }
+
+    .email-input,
+    .name-input,
+    .password-input {
+        border: none;
+        background-color: transparent;
+        width: 350px;
+        height: 30px;
+        border-bottom: 2px solid black;
+        outline: none;
+    }
+
+    .city-input,
+    .mobile-input,
+    .dob-input {
+        border: none;
+        background-color: transparent;
+        width: 350px;
+        height: 30px;
+        border-bottom: 2px solid black;
+        outline: none;
+    }
+
+    .password-input:hover,
+    .email-input:hover,
+    .name-input:hover,
+    .city-input:hover,
+    .mobile-input:hover {
+        border-bottom: 4px solid rgb(0, 0, 0);
+
+    }
+
+    ion-icon {
+        position: absolute;
+        right: 200px;
+    }
+
+    th {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-collapse: collapse;
+        border-right: 1px solid black;
+
+    }
+
+    table {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        margin: 0%;
+        border-collapse: collapse !important;
+
+
+    }
+
+    h2 {
+        height: 34px;
+        position: relative;
+        top: 0;
+        right: 0%;
+        left: 0%;
+        margin-block-end: 0px;
+        margin-block-start: 0px;
+        box-shadow: 0px 0px 0px 0px;
+    }
+
+    th:hover {
+        background-color: rgba(67, 128, 149, 0.499);
+    }
+
+    th:hover a {
+        color: rgb(0, 0, 0);
+
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-family: Monospace;
+        font-size: 15px;
+    }
+
+    h1 {
+        font-family: Monospace;
+        color: rgb(95, 92, 92);
+    }
+
+    #ion {
+        margin: 0% !important;
+        position: absolute !important;
+        right: 200px !important;
+    }
+
+    form:hover {
+        box-shadow: 1px 3px 25px 3px rgb(1, 10, 22);
+    }
+
+    .b1:hover,
+    .b2:hover {
+
+        box-shadow: 1px 2px 6px 1px;
+
+    }
+
+    .checkbox {
+        accent-color: gray;
+    }
+
+    span {
+        color: brown;
+    }
+</style>
+
+<body>
+    <section id="top">
+        <div class="nevigation">
+            <h2>
+                <table>
+                    <tr>
+                        <th><a href="/"> Home</a></th>
+                        <th><a href="#">About</a></th>
+                        <th><a href="/register">Registar</a></th>
+                        <th style="background-color: rgba(0, 0, 0, 0.377);"><a href="/login"> Login</a></th>
+                        <th><a href="#">contact us</a></th>
+                    </tr>
+                </table>
+            </h2>
+        </div>
+
+
+        <div class="form">
+            <form autocomplete="off" method="post" action="/auth/login">
+                <center>
+                    <h1>Login Here:<ion-icon name="people-circle-outline"></ion-icon></h1>
+                </center><br><br><br>
+
+                <div class="email">
+                    <label for="">Email :</label><br>
+                    <input type="email" required class="email-input" id="email" placeholder="" name="email">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <span id="email"></span>
+                </div><br>
+
+                <div class="password">
+                    <label for="">Password :</label><br>
+                    <input type="password" required class="password-input" id="password" name="password">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <br> <span id="passwordd"></span><br>
+
+                    <br><br><br>
+                    <div class="button">
+                        <center><button class="b1" type="submit" name="signup">Submit</button>
+                            <button class="b2" type="reset">Reset</button>
+                        </center>
+                    </div>
+                    <br>
+                    <div class="alert alert-danger" style="margin: 5px 5px" role="alert">
+
+                    </div>
+
+            </form><br><br>
+        </div>
+
+</body>
+
+</html>
